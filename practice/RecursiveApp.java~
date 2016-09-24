@@ -1,0 +1,21 @@
+package practice1;
+
+public class RecursiveApp{
+
+    public static long digits(long n){
+        if (n < 0){
+            return;
+        }
+        return 1 + digits(n/10);
+    }
+
+    public static long sumOfDigits(long n){
+        int neg = 1;
+        if (n<1){
+            neg *= -1;
+            n *= -1;
+        }
+        return n%10 + sumOfDigits(n/10);
+    }
+
+}

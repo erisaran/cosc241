@@ -1,0 +1,27 @@
+package week07;
+
+import java.util.*;
+import java.io.FileReader;
+import java.io.BufferedReader;
+
+public class FrequencyGenerator implements WordGenerator {
+
+    private Random random;
+
+    public FrequencyGenerator(Random r) {
+        random = r;
+    }
+    
+    public String nextWord(int n) {
+        FileReader f = new FileReader("letter-frequencies.txt");
+        BufferedReader b = new BufferedReader(f);
+        int alphabetSize = 26;
+        double [] freq = new double [alphabetSize];
+        for (int i = 0;i < alphabetSize;i++){
+            String x = b.readLine();
+            freq[i] = Double.parseDouble(x);
+        }
+        return "";
+    }
+
+}

@@ -1,0 +1,42 @@
+/**File: Counter.java 27 Feb 2015 Week 1 */
+
+package week01;
+
+/**
+ * Reads input and counts the number of lines and words it reads.
+ */
+
+import java.util.*;
+
+/** Class for Counting lines and words in an input.
+ * @author Ben Dutton.
+ */
+public class Counter{
+
+    /** Main method.
+      * @param args 
+      */
+    public static void main (String[]args){
+        
+        int lineCount = 0; /** initialises counters. */
+        int wordCount = 0; /** initialises the word counter. */
+        /** Reads in a file or keyboard input from the user */
+        Scanner stringScan = new Scanner(System.in);
+
+        while (stringScan.hasNextLine()){
+            int arrayLength = 0;
+            String [] wordCounter = stringScan.nextLine().split(" ");
+            arrayLength += wordCounter.length;
+            for (int i = 0;i < wordCounter.length;i ++){
+                if (wordCounter[i].equals("")){
+                    arrayLength -= 1;
+                }
+            }
+            wordCount += arrayLength;
+            lineCount += 1;            
+        }
+        System.out.println("lines: "+ lineCount);
+        System.out.println("words: " + wordCount);
+    }
+
+}

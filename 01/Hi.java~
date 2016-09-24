@@ -1,0 +1,28 @@
+/**27 Feb 2015 Week 1
+ * Reads input and counts the number of lines and words it reads.
+ */
+
+package week01;
+
+import java.util.*
+
+public class Counter{
+
+    public static void main (String[] args){
+        int lineCount = 0; //initialises counters
+        int wordCount = 0;
+        String inputString = readIn("Type a String");
+        System.out.println(inputString);
+        
+        
+    }
+
+    public static String readIn(String prompt){
+        Scanner sc = new Scanner(System.in);
+        System.out.println(prompt);
+        return sc.nextLine();
+    }
+
+}
+    
+        
